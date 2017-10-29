@@ -32,6 +32,28 @@ namespace YoutubeDL
         public MainWindow()
         {
             InitializeComponent();
+            Loaded += MainWindow_Loaded;
+            menuTitleBar.MouseDown += (s, e) => DragMove();
+        }
+
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            checkDefaultSettings();
+        }
+
+        public void checkDefaultSettings()
+        {
+            var defaults = Properties.Settings.Default;
+            if (defaults.defaultDirectory != null)
+            {
+                selectedDirectory = defaults.defaultDirectory.ToString();
+                directorySelect.Content = defaults.defaultDirectory.ToString();
+            }
+            if (defaults.youtubedlLocation != null)
+            {
+                youtubeDlLocation = defaults.youtubedlLocation.ToString();
+                youtubeLocation.Content = defaults.youtubedlLocation.ToString();
+            }
         }
 
         private void Window_Closed(object sender, EventArgs e)
@@ -53,6 +75,10 @@ namespace YoutubeDL
             {
                 selectedDirectory = dialog.FileName;
                 directorySelect.Content = dialog.FileName;
+                
+                Properties.Settings.Default.Upgrade();
+                Properties.Settings.Default.defaultDirectory = dialog.FileName;
+                Properties.Settings.Default.Save();
             }
         }
 
@@ -63,6 +89,10 @@ namespace YoutubeDL
             {
                 youtubeDlLocation = dialog.FileName;
                 youtubeLocation.Content = dialog.FileName;
+                
+                Properties.Settings.Default.Upgrade();
+                Properties.Settings.Default.youtubedlLocation = dialog.FileName;
+                Properties.Settings.Default.Save();
             }
         }
 
@@ -154,12 +184,18 @@ namespace YoutubeDL
                 }
                 line.Inlines.Add(new LineBreak());
                 statusConsole.Inlines.Add(line);
+                statusScroll.ScrollToBottom();
             }
         }
 
-        private void ScrollViewer_SizeChanged(object sender, SizeChangedEventArgs e)
+        private void btnCloseApp_Click(object sender, RoutedEventArgs e)
         {
-            statusScroll.ScrollToBottom();
+            SystemCommands.CloseWindow(this);
+        }
+
+        private void btnMinimizeApp_Click(object sender, RoutedEventArgs e)
+        {
+            SystemCommands.MinimizeWindow(this);
         }
     }
 }

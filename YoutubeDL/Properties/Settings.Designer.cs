@@ -22,5 +22,29 @@ namespace YoutubeDL.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string defaultDirectory {
+            get {
+                return ((string)(this["defaultDirectory"]));
+            }
+            set {
+                this["defaultDirectory"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string youtubedlLocation {
+            get {
+                return ((string)(this["youtubedlLocation"]));
+            }
+            set {
+                this["youtubedlLocation"] = value;
+            }
+        }
     }
 }

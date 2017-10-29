@@ -4,14 +4,58 @@
              xmlns:local="clr-namespace:WpfApp1"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        
         <Style x:Key="RobotoLight">
             <Setter Property="TextElement.FontFamily" Value="Ressources/#Roboto-Light"/>
         </Style>
         <Style x:Key="RobotoMed">
             <Setter Property="TextElement.FontFamily" Value="Ressources/#Roboto-Medium"/>
         </Style>
-        <Style x:Key="Test">
+        <Style x:Key="Merriweather">
             <Setter Property="TextElement.FontFamily" Value="Ressources/#Merriweather-Black"/>
+        </Style>
+
+        <Style x:Key="titlebarRemoveHover" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center"
+                        VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <ImageBrush x:Key="closeBtn" ImageSource="Resources/close.png" Stretch="UniformToFill"/>
+        <ImageBrush x:Key="minimizeBtn" ImageSource="Resources/minimize_trans.png" Stretch="UniformToFill"/>
+
+        <Style TargetType="Button" x:Key="customBtn">
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Height" Value="80" />
+            <Setter Property="Width" Value="80" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" CornerRadius="5" Background="#188090">
+                            <ContentPresenter x:Name="ButtonContentPresenter" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <ContentPresenter.Resources>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="TextAlignment" Value="Center" />
+                                    </Style>
+                                    <Style TargetType="Image">
+                                        <Setter Property="Width" Value="10" />
+                                        <Setter Property="Margin" Value="10" />
+                                    </Style>
+                                </ContentPresenter.Resources>
+                            </ContentPresenter>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
     </Application.Resources>
 </Application>
