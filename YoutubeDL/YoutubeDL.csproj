@@ -97,6 +97,9 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Resource Include="Ressources\Merriweather-Black.ttf" />
+    <Resource Include="Ressources\Roboto-Medium.ttf" />
+    <Resource Include="Ressources\Roboto-Light.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

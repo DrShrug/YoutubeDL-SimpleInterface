@@ -5,24 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:YoutubeDL"
         mc:Ignorable="d"
-        Title="Quick Convert" Height="373.448" Width="490.371" ResizeMode="NoResize">
-    <Grid>
-        <TextBox Name="txtYoutubeURL" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="90,36,0,0" TextWrapping="Wrap" Text="&#xD;&#xA;" VerticalAlignment="Top" Width="301"/>
-        <Label Content="Enter Youtube URL" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="10,10,10,0" VerticalAlignment="Top" Width="366"/>
-        <Button Content="Select target directory" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top" Width="131" Click="clickSetDownloadDirectory" Height="30"/>
-        <Label Content="[Download directory]" Name="directorySelect" HorizontalAlignment="Left" Margin="146,71,0,0" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="313" Height="30"/>
-        <Button Content="Audio"  HorizontalAlignment="Left" Margin="10,211,0,0" VerticalAlignment="Top" Width="75" Click="clickGetAudio"/>
-        <Button Content="Video" HorizontalAlignment="Left" Margin="10,236,0,0" VerticalAlignment="Top" Width="75" Click="clickGetVideo"/>
-        <Button Content="Youtube-dl location" HorizontalAlignment="Left" Margin="10,106,0,0" VerticalAlignment="Top" Width="131" Height="30" Click="clickSetYoutubeDLDirectory"/>
-        <Label Content="[youtube-dl.exe location]" Name="youtubeLocation" HorizontalAlignment="Left" Margin="146,106,0,0" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="313" Height="30"/>
-        <GroupBox Header="Status" HorizontalAlignment="Left" Height="156" Margin="102,156,0,0" VerticalAlignment="Top" Width="370">
-            <ScrollViewer Name="statusScroll" BorderBrush="WhiteSmoke" HorizontalAlignment="Left" Height="144" VerticalAlignment="Top" Width="362" Margin="0,-7,-6,-3" BorderThickness="2">
-                <TextBlock TextWrapping="Wrap" Name="statusConsole" Text="" Width="337" Height="129"/>
-            </ScrollViewer>
-        </GroupBox>
-
-
-
+        Title="Quick Convert" Height="509.448" Width="731.371" ResizeMode="NoResize">
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid Margin="146,82,0,0" RenderTransformOrigin="0.5,0.513" Background="#FFDCE2E8">
+            <TextBox Name="txtYoutubeURL" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Stretch" Height="23" Margin="45,36,45,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+            <Label Content="Enter Youtube URL" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Margin="10,10,10,0" VerticalAlignment="Top" Width="366"/>
+            <Label Style="{DynamicResource RobotoLight}" Content="[Download directory]" Name="directorySelect" HorizontalAlignment="Left" Margin="81,101,0,0" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="313" Height="30"/>
+            <Label Content="[Converter location]" Name="youtubeLocation" HorizontalAlignment="Left" Margin="81,181,0,0" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="453" Height="30"/>
+            <GroupBox Header="Status" HorizontalAlignment="Left" Height="172" Margin="45,216,0,0" VerticalAlignment="Top" Width="500" BorderBrush="{x:Null}">
+                <ScrollViewer Name="statusScroll" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,-7,-6,-3" BorderThickness="2" Foreground="Black">
+                    <TextBlock TextWrapping="Wrap" Name="statusConsole" Text="" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0, 10, 0, 0"/>
+                </ScrollViewer>
+            </GroupBox>
+            <Ellipse Fill="#FF00A1AF" HorizontalAlignment="Left" Height="14" Margin="62,79,0,0" VerticalAlignment="Top" Width="14"/>
+            <Label Content="Selected download directory" HorizontalAlignment="Left" Margin="81,71,0,0" VerticalAlignment="Top" Height="30" Width="453"/>
+            <Ellipse Fill="#FF00A1AF" HorizontalAlignment="Left" Height="14" Margin="62,79,0,0" VerticalAlignment="Top" Width="14"/>
+            <Ellipse Fill="#FF00A1AF" HorizontalAlignment="Left" Height="14" Margin="62,159,0,0" VerticalAlignment="Top" Width="14"/>
+            <Label Content="Set youtube-dl.exe location" HorizontalAlignment="Left" Margin="81,151,0,0" VerticalAlignment="Top" Height="30" Width="453"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="398" Margin="0,82,0,0" VerticalAlignment="Top" Width="159" Background="#FF3F414E">
+            <Button Content="Select target directory" HorizontalAlignment="Left" Margin="10,79,0,0" VerticalAlignment="Top" Width="139" Click="clickSetDownloadDirectory" Height="30"/>
+            <Button Content="Audio"  HorizontalAlignment="Left" Margin="10,285,0,0" VerticalAlignment="Top" Width="139" Click="clickGetAudio"/>
+            <Button Content="Video" HorizontalAlignment="Left" Margin="10,310,0,0" VerticalAlignment="Top" Width="139" Click="clickGetVideo"/>
+            <Button Content="Youtube-dl location" HorizontalAlignment="Left" Margin="10,168,0,0" VerticalAlignment="Top" Width="139" Height="30" Click="clickSetYoutubeDLDirectory"/>
+        </Grid>
+        <Grid HorizontalAlignment="Stretch" Height="82" VerticalAlignment="Top" Background="#FF31333D">
+            <Label Content="Youtube DL" Style="{DynamicResource Test}" HorizontalAlignment="Left" Margin="10,10,0,10" Height="62" Width="705" FontSize="48" VerticalContentAlignment="Center" VerticalAlignment="Top" FontFamily="./#Roboto" Foreground="#FFFDFDFD"/>
+        </Grid>
 
     </Grid>
 </Window>
