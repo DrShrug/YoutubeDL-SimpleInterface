@@ -1,6 +1,6 @@
 # Youtube DL - Simple interface
-A small interface that simplifies the process of download videos and audio off of youtube.
-Uses Youtube-DL
+A small interface that simplifies the process of download videos and audio off of youtube.  
+For personal use
 
 
 ## Built With
