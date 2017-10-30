@@ -64,7 +64,7 @@
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Content">
                         <Setter.Value>
-                            <Image Source="Resources/minimize_hover.png"/>
+                            <Image Source="Resources/minimize_hovered.png"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
