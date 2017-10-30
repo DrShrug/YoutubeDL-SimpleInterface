@@ -9,13 +9,13 @@
 
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <Canvas Name="menuTitleBar" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="731" Background="#FF25272E">
-            <Button Name="btnMinimizeApp" Style="{StaticResource titlebarRemoveHover}" Background="{StaticResource minimizeBtn}" Canvas.Left="685" Width="24" Height="24" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="btnMinimizeApp_Click"/>
-            <Button Name="btnCloseApp" Style="{StaticResource titlebarRemoveHover}" Background="{StaticResource closeBtn}" Canvas.Left="708" Width="24" Height="23" Click="btnCloseApp_Click" BorderBrush="{x:Null}" Foreground="{x:Null}"/>
+            <Button Name="btnMinimizeApp" Style="{StaticResource btnTitlebarMinimize}" Background="{StaticResource minimizeBtn}" Canvas.Left="685" Width="24" Height="24" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="btnMinimizeApp_Click"/>
+            <Button Name="btnCloseApp" Style="{StaticResource btnTitlebarClose}" Background="{StaticResource closeBtn}" Canvas.Left="708" Width="24" Height="23" Click="btnCloseApp_Click" BorderBrush="{x:Null}" Foreground="{x:Null}"/>
         </Canvas>
         <Grid Margin="159,105,0,0" RenderTransformOrigin="0.5,0.513" Background="#FFDCE2E8">
 
             <Grid Margin="62,0,45,332" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                <TextBox Name="txtYoutubeURL" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Stretch" Height="23" Margin="62,26,45,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+                <TextBox Name="txtYoutubeURL" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Stretch" Height="23" Margin="62,26,45,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Foreground="#FF5A5E66"/>
                 <Label Content="Enter Youtube URL" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Margin="62,0,45,0" VerticalAlignment="Top" Foreground="#FF5A5E66"/>
             </Grid>
 

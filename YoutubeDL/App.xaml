@@ -15,21 +15,64 @@
             <Setter Property="TextElement.FontFamily" Value="Ressources/#Merriweather-Black"/>
         </Style>
 
-        <Style x:Key="titlebarRemoveHover" TargetType="Button">
+        <Style x:Key="btnTitlebarClose" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
                         <Grid Background="{TemplateBinding Background}">
-                            <ContentPresenter HorizontalAlignment="Center"
-                        VerticalAlignment="Center"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Grid>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="False">
+                    <Setter Property="Content">
+                        <Setter.Value>
+                            <Image Source="Resources/close_grey.png"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Content">
+                        <Setter.Value>
+                            <Image Source="Resources/close.png"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
         </Style>
 
-        <ImageBrush x:Key="closeBtn" ImageSource="Resources/close.png" Stretch="UniformToFill"/>
-        <ImageBrush x:Key="minimizeBtn" ImageSource="Resources/minimize_trans.png" Stretch="UniformToFill"/>
+        <Style x:Key="btnTitlebarMinimize" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="False">
+                    <Setter Property="Content">
+                        <Setter.Value>
+                            <Image Source="Resources/minimize.png"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Content">
+                        <Setter.Value>
+                            <Image Source="Resources/minimize_hover.png"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <ImageBrush x:Key="closeBtn" ImageSource="Resources/close_grey.png" Stretch="UniformToFill"/>
+        <ImageBrush x:Key="minimizeBtn" ImageSource="Resources/minimize.png" Stretch="UniformToFill"/>
 
         <Style TargetType="Button" x:Key="customBtn">
             <Setter Property="Cursor" Value="Hand" />
