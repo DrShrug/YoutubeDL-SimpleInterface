@@ -5,26 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:YoutubeDL"
         mc:Ignorable="d"
-        Title="Quick Convert" Height="546.448" Width="731.371" ResizeMode="NoResize" WindowStyle="None">
+        Title="Quick Convert" Height="504.448" Width="731.371" ResizeMode="NoResize" WindowStyle="None">
 
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <Canvas Name="menuTitleBar" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="731" Background="#FF25272E">
             <Button Name="btnMinimizeApp" Style="{StaticResource btnTitlebarMinimize}" Background="{StaticResource minimizeBtn}" Canvas.Left="685" Width="24" Height="24" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="btnMinimizeApp_Click"/>
             <Button Name="btnCloseApp" Style="{StaticResource btnTitlebarClose}" Background="{StaticResource closeBtn}" Canvas.Left="708" Width="24" Height="23" Click="btnCloseApp_Click" BorderBrush="{x:Null}" Foreground="{x:Null}"/>
         </Canvas>
-        <Grid Margin="159,105,0,0" RenderTransformOrigin="0.5,0.513" Background="#FFDCE2E8">
+        <Grid Margin="174,105,0,0" RenderTransformOrigin="0.5,0.513" Background="#FFDCE2E8">
 
             <Grid Margin="62,0,45,332" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                 <TextBox Name="txtYoutubeURL" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Stretch" Height="23" Margin="62,26,45,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Foreground="#FF5A5E66"/>
                 <Label Content="Enter Youtube URL" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Margin="62,0,45,0" VerticalAlignment="Top" Foreground="#FF5A5E66"/>
             </Grid>
 
-            <Grid HorizontalAlignment="Left" Height="139" Margin="62,240,0,0" VerticalAlignment="Top" Width="459">
+            <Grid HorizontalAlignment="Left" Height="139" Margin="62,240,0,0" VerticalAlignment="Top" Width="450">
                 <Grid.Effect>
                     <DropShadowEffect Color="#d8dee2" ShadowDepth="1" BlurRadius="10"/>
                 </Grid.Effect>
                 <ScrollViewer x:Name="statusScroll" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="2" Foreground="Black" Background="White">
-                    <TextBlock TextWrapping="Wrap" x:Name="statusConsole" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Foreground="#FF4B4F59" Height="112"><InlineUIContainer/></TextBlock>
+                    <TextBlock TextWrapping="Wrap" x:Name="statusConsole" VerticalAlignment="Center" HorizontalAlignment="Stretch" Foreground="#FF4B4F59" Height="120" Width="418"><InlineUIContainer/></TextBlock>
                 </ScrollViewer>
                 <Border BorderBrush="#FF00A1AF" BorderThickness="3, 0, 0, 0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
             </Grid>
@@ -53,11 +53,37 @@
 
 
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="441" Margin="0,105,0,0" VerticalAlignment="Top" Width="159" Background="#FF3F414E">
-            <Button Style="{StaticResource customBtn }" Content="Select target directory" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top" Width="139" Click="clickSetDownloadDirectory" Height="35"/>
-            <Button Style="{StaticResource customBtn }" Content="Audio"  HorizontalAlignment="Left" Margin="10,285,0,0" VerticalAlignment="Top" Width="139" Click="clickGetAudio" Height="25"/>
-            <Button Style="{StaticResource customBtn }" Content="Video" HorizontalAlignment="Left" Margin="10,315,0,0" VerticalAlignment="Top" Width="139" Click="clickGetVideo" Height="23"/>
-            <Button Style="{StaticResource customBtn }" Content="Youtube-dl location" HorizontalAlignment="Left" Margin="10,189,0,0" VerticalAlignment="Top" Width="139" Height="33" Click="clickSetYoutubeDLDirectory"/>
+        <Grid HorizontalAlignment="Left" Height="399" Margin="0,105,0,0" VerticalAlignment="Top" Width="174" Background="#FF3F414E">
+            <Button HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="154" Click="clickSetDownloadDirectory" Height="45" Background="{x:Null}" BorderBrush="{x:Null}">
+                <Grid HorizontalAlignment="Stretch" Background="#FF31333D" Width="154">
+                    <Image Source="Resources/downloadfolder.png"  HorizontalAlignment="Right" Width="28" Margin="0,6,121,6"/>
+                    <TextBlock Text="Target directory" VerticalAlignment="Center" Margin="51,13,16,12" Foreground="White"/>
+                    <Border BorderBrush="#FF3F414E" BorderThickness="2, 0, 0, 0" Margin="38,0,112,0"/>
+                </Grid>
+            </Button>
+            <Button HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top" Width="154" Height="45" Click="clickSetYoutubeDLDirectory" Background="{x:Null}" BorderBrush="{x:Null}">
+                <Grid HorizontalAlignment="Stretch" Background="#FF31333D" Width="154">
+                    <Image Source="Resources/exe.png" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="9,5,0,7" Height="29" Width="22"/>
+                    <TextBlock Text="Set .exe path" Margin="59,13,23,12" VerticalAlignment="Center" Foreground="White" Height="16"/>
+                    <Border BorderBrush="#FF3F414E" BorderThickness="2, 0, 0, 0" Margin="38,0,112,0"/>
+                </Grid>
+            </Button>
+            <Button HorizontalAlignment="Left" Margin="10,294,0,0" VerticalAlignment="Top" Width="154" Click="clickGetAudio" Height="45">
+                <Grid HorizontalAlignment="Stretch" Background="#FF31333D" Width="154">
+                    <Image Source="Resources/audiofile.png" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="9,5,0,7" Height="29" Width="22"/>
+                    <TextBlock Text="Get audio" Margin="69,12,32,13" VerticalAlignment="Center" Foreground="White" Height="16"/>
+                    <Border BorderBrush="#FF3F414E" BorderThickness="2, 0, 0, 0" Margin="38,0,112,0"/>
+                </Grid>
+            </Button>
+            <Button HorizontalAlignment="Left" Margin="10,344,0,0" VerticalAlignment="Top" Width="154" Click="clickGetVideo" Height="45">
+                <Grid HorizontalAlignment="Stretch" Background="#FF31333D" Width="154">
+                    <Image Source="Resources/dlVid.png" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="7,8,0,7" Height="26" Width="29"/>
+                    <TextBlock Text="Get video" Margin="69,12,32,13" VerticalAlignment="Center" Foreground="White" Height="16"/>
+                    <Border BorderBrush="#FF3F414E" BorderThickness="2, 0, 0, 0" Margin="38,0,112,0"/>
+                </Grid>
+            </Button>
+            <Image HorizontalAlignment="Left" Height="141" Margin="10,126,0,0" VerticalAlignment="Top" Width="154" Source="Resources/doot.png"/>
+
         </Grid>
         <Grid HorizontalAlignment="Stretch" Height="82" VerticalAlignment="Top" Background="#FF31333D" Margin="0,23,0,0">
             <Label Content="Youtube" Style="{DynamicResource Merriweather}" HorizontalAlignment="Left" Margin="10,10,0,0" Height="62" Width="192" FontSize="48" VerticalContentAlignment="Center" VerticalAlignment="Top" FontFamily="/YoutubeDL;component/Ressources/#Merriweather Black" Foreground="White"/>

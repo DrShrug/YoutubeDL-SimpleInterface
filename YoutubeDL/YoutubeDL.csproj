@@ -151,5 +151,18 @@
   <ItemGroup>
     <Resource Include="Resources\minimize_hovered.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\downloadfolder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\exe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\audiofile.png" />
+    <Resource Include="Resources\dlVid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\doot.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
