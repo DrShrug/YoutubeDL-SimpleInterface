@@ -24,7 +24,7 @@
                     <DropShadowEffect Color="#d8dee2" ShadowDepth="1" BlurRadius="10"/>
                 </Grid.Effect>
                 <ScrollViewer x:Name="statusScroll" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="2" Foreground="Black" Background="White">
-                    <TextBlock TextWrapping="Wrap" x:Name="statusConsole" VerticalAlignment="Center" HorizontalAlignment="Stretch" Foreground="#FF4B4F59" Height="120" Width="418"><InlineUIContainer/></TextBlock>
+                    <TextBlock TextWrapping="Wrap" x:Name="statusConsole" VerticalAlignment="Center" HorizontalAlignment="Stretch" Foreground="#FF4B4F59"  Width="418"><InlineUIContainer/></TextBlock>
                 </ScrollViewer>
                 <Border BorderBrush="#FF00A1AF" BorderThickness="3, 0, 0, 0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
             </Grid>
@@ -68,14 +68,14 @@
                     <Border BorderBrush="#FF3F414E" BorderThickness="2, 0, 0, 0" Margin="38,0,112,0"/>
                 </Grid>
             </Button>
-            <Button HorizontalAlignment="Left" Margin="10,294,0,0" VerticalAlignment="Top" Width="154" Click="clickGetAudio" Height="45">
+            <Button HorizontalAlignment="Left" Margin="10,294,0,0" VerticalAlignment="Top" Width="154" Click="clickGetAudio" Height="45" Background="{x:Null}" BorderBrush="{x:Null}">
                 <Grid HorizontalAlignment="Stretch" Background="#FF31333D" Width="154">
                     <Image Source="Resources/audiofile.png" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="9,5,0,7" Height="29" Width="22"/>
                     <TextBlock Text="Get audio" Margin="69,12,32,13" VerticalAlignment="Center" Foreground="White" Height="16"/>
                     <Border BorderBrush="#FF3F414E" BorderThickness="2, 0, 0, 0" Margin="38,0,112,0"/>
                 </Grid>
             </Button>
-            <Button HorizontalAlignment="Left" Margin="10,344,0,0" VerticalAlignment="Top" Width="154" Click="clickGetVideo" Height="45">
+            <Button HorizontalAlignment="Left" Margin="10,344,0,0" VerticalAlignment="Top" Width="154" Click="clickGetVideo" Height="45" Background="{x:Null}" BorderBrush="{x:Null}">
                 <Grid HorizontalAlignment="Stretch" Background="#FF31333D" Width="154">
                     <Image Source="Resources/dlVid.png" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="7,8,0,7" Height="26" Width="29"/>
                     <TextBlock Text="Get video" Margin="69,12,32,13" VerticalAlignment="Center" Foreground="White" Height="16"/>

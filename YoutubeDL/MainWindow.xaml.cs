@@ -153,6 +153,8 @@ namespace YoutubeDL
 
                 cmd.BeginOutputReadLine();
                 cmd.BeginErrorReadLine();
+
+                
             }
             else
             {
@@ -165,7 +167,9 @@ namespace YoutubeDL
             if (!statusConsole.Dispatcher.CheckAccess())
             {
                 statusConsole.Dispatcher.Invoke(new Action(()
-                    => { writeToConsole(text); }));
+                    => {
+                        writeToConsole(text);
+                    }));
             }
             else
             {
