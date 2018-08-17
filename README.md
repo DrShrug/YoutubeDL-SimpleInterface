@@ -3,7 +3,7 @@ A small interface that simplifies the process of download videos and audio off o
 Will eventually add more features and polish the interface, maybe.
 
 
-## Built With
+## How does this work?
 ![Should have an image here](https://i.imgur.com/5fwoTzd.png)
 1. Set the target directory in which downloaded audio/video files will be stored
 2. Set the location of the youtubedl .exe file downloaded from [this git repo](https://github.com/rg3/youtube-dl)
@@ -14,4 +14,5 @@ Will eventually add more features and polish the interface, maybe.
 7. Shows where the youtubedl .exe file is stored
 8. Console that shows download progress
 
+## Built using
 * [Youtube DL](https://github.com/rg3/youtube-dl) 
